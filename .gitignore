@@ -13,8 +13,10 @@ composer.phar
 .DS_Store
 Thumbs.db
 
-# Node modules (for commitlint)
+# Node modules (for commitlint and semantic-release)
 node_modules/
+
+# Note: package-lock.json is intentionally tracked for reproducible builds
 
 # Logs
 *.log

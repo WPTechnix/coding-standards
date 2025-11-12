@@ -1,0 +1,52 @@
+version: 2
+updates:
+  # PHP dependencies (coding standard rules)
+  - package-ecosystem: "composer"
+    directory: "/"
+    schedule:
+      interval: "monthly"
+    open-pull-requests-limit: 3
+    groups:
+      coding-standards:
+        patterns:
+          - "slevomat/coding-standard"
+          - "phpcsstandards/phpcsextra"
+          - "squizlabs/php_codesniffer"
+    labels:
+      - "dependencies"
+      - "php"
+    commit-message:
+      prefix: "chore(deps)"
+
+  # npm dependencies (semantic-release and commitlint)
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "monthly"
+    open-pull-requests-limit: 3
+    groups:
+      semantic-release:
+        patterns:
+          - "@semantic-release/*"
+          - "semantic-release"
+          - "conventional-changelog-*"
+      commitlint:
+        patterns:
+          - "@commitlint/*"
+    labels:
+      - "dependencies"
+      - "tooling"
+    commit-message:
+      prefix: "chore(deps)"
+
+  # GitHub Actions
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 2
+    labels:
+      - "dependencies"
+      - "ci"
+    commit-message:
+      prefix: "chore(ci)"
