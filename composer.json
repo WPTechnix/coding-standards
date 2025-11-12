@@ -1,6 +1,6 @@
 {
     "name": "wptechnix/coding-standards",
-    "version": "0.0.0",
+    "version": "1.0.0",
     "description": "A modern PHP coding standard built on top of PSR-12, with extra enforcements for strictness and type safety.",
     "type": "phpcodesniffer-standard",
     "keywords": [
