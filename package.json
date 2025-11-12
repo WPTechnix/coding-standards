@@ -1,0 +1,25 @@
+{
+  "name": "wptechnix-coding-standards",
+  "version": "0.0.0",
+  "description": "A modern PHP coding standard built on top of PSR-12, with extra enforcements for strictness and type safety.",
+  "private": true,
+  "scripts": {
+    "commitlint": "commitlint --edit"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^20.1.0",
+    "@commitlint/config-conventional": "^20.0.0",
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/commit-analyzer": "^13.0.1",
+    "@semantic-release/exec": "^7.1.0",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^11.0.5",
+    "@semantic-release/release-notes-generator": "^14.0.3",
+    "conventional-changelog-conventionalcommits": "^9.1.0",
+    "semantic-release": "^25.0.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wptechnix/coding-standards.git"
+  }
+}

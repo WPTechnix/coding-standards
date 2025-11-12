@@ -1,0 +1,26 @@
+# Composer
+/vendor/
+composer.lock
+composer.phar
+
+# IDE
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Node modules (for commitlint)
+node_modules/
+
+# Logs
+*.log
+
+# Local documentation and development files
+/local/
+
+# Claude settings
+/.claude/
