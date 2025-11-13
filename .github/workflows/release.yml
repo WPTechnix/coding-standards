@@ -21,7 +21,7 @@ jobs:
         uses: actions/checkout@v5
         with:
           fetch-depth: 0
-          persist-credentials: false
+          persist-credentials: true  # changed to true to allow semantic-release to push
 
       - name: Setup Node.js
         uses: actions/setup-node@v6
@@ -33,5 +33,5 @@ jobs:
 
       - name: Semantic Release
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_PAT }}  # use your PAT instead of GITHUB_TOKEN
         run: npx semantic-release
