@@ -29,7 +29,15 @@ jobs:
 
       - name: Validate current commit (push)
         if: github.event_name == 'push'
-        run: npx commitlint --from HEAD~1 --to HEAD --verbose
+        run: |
+          # Check if this is the first commit
+          if git rev-parse HEAD~1 >/dev/null 2>&1; then
+            # Not the first commit, validate from previous commit
+            npx commitlint --from HEAD~1 --to HEAD --verbose
+          else
+            # First commit, validate only HEAD
+            npx commitlint --from HEAD --to HEAD --verbose
+          fi
 
       - name: Validate PR commits
         if: github.event_name == 'pull_request'
