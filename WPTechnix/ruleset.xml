@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<ruleset name="WPTechnix">
+    <description>
+        WPTechnix Coding Standards for PHP Projects
+    </description>
+
+    <!-- ################################################################## -->
+    <!-- ##                    BASE STANDARD: PSR-12                     ## -->
+    <!-- ################################################################## -->
+
+    <rule ref="PSR12"/>
+</ruleset>

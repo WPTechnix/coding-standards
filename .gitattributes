@@ -1,0 +1,25 @@
+# Export ignore patterns
+/.gitattributes             export-ignore
+/.gitignore                 export-ignore
+/.github/                   export-ignore
+/scripts                    export-ignore
+/.editorconfig              export-ignore
+/package.json               export-ignore
+/package-lock.json          export-ignore
+/.npmrc                     export-ignore
+/.commitlintrc.json         export-ignore
+/.release-please-manifest.json export-ignore
+/release-please-config.json export-ignore
+/.husky/                    export-ignore
+/CHANGELOG.md               export-ignore
+/CODE_OF_CONDUCT.md         export-ignore
+/CONTRIBUTING.md            export-ignore
+/README.md                  export-ignore
+/SECURITY.md                export-ignore
+
+# Language detection - mark as PHP project
+*.json linguist-vendored
+*.md linguist-documentation
+package.json linguist-vendored
+package-lock.json linguist-vendored
+node_modules/* linguist-vendored
