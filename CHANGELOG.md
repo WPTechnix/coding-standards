@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.1](https://github.com/WPTechnix/coding-standards/compare/v1.0.0...v1.0.1) (2025-11-17)
+
+
+### Bug Fixes
+
+* **composer:** adjust PHPCS and PHPCSExtra version constraints for broader compatibility ([1b41560](https://github.com/WPTechnix/coding-standards/commit/1b41560c8c955d119570c60fddac78c2206afc8d))
+
 ## 1.0.0 (2025-11-16)
 
 
