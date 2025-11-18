@@ -1,13 +1,16 @@
 {
     "name": "wptechnix/coding-standards",
-    "description": "A modern PHP coding standard built on top of PSR-12, with extra enforcements for strictness and type safety.",
+    "description": "A modern PHP coding standard (PHPCS) compatible with PSR-12, featuring additional rules for strictness and type safety.",
     "type": "phpcodesniffer-standard",
     "keywords": [
         "phpcs",
-        "standards",
         "coding-standards",
+        "coding-standard",
+        "standards",
         "code-quality",
-        "wptechnix"
+        "static-analysis",
+        "wptechnix",
+        "psr-12"
     ],
     "license": "MIT",
     "authors": [

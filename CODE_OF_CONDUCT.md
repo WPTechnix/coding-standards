@@ -33,7 +33,7 @@ where an individual is representing the project or its community.
 
 ## Enforcement
 Instances of abusive, harassing, or otherwise unacceptable behavior may be
-reported by contacting the project team at [developers@wptechnix.com]. All complaints
+reported by contacting the project team at [developers@wptechnix.com](mailto:developers@wptechnix.com). All complaints
 will be reviewed and investigated promptly and fairly.
 
 ## Attribution

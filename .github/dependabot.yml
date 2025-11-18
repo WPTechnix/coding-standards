@@ -1,23 +1,5 @@
 version: 2
 updates:
-  # PHP dependencies (coding standard rules)
-  - package-ecosystem: "composer"
-    directory: "/"
-    schedule:
-      interval: "monthly"
-    open-pull-requests-limit: 3
-    groups:
-      coding-standards:
-        patterns:
-          - "slevomat/coding-standard"
-          - "phpcsstandards/phpcsextra"
-          - "squizlabs/php_codesniffer"
-    labels:
-      - "dependencies"
-      - "php"
-    commit-message:
-      prefix: "chore(deps)"
-
   # npm dependencies (commitlint)
   - package-ecosystem: "npm"
     directory: "/"

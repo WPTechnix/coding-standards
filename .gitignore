@@ -15,15 +15,10 @@ Thumbs.db
 
 # Node modules (for commitlint)
 node_modules/
-
 # Note: package-lock.json is intentionally tracked for reproducible builds
-# .npmrc enforces engine-strict for team consistency
 
 # Logs
 *.log
-
-# Local documentation and development files
-/local/
 
 # Claude settings
 /.claude/
