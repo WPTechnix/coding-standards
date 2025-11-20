@@ -17,6 +17,7 @@ This is a coding standard for [PHP_CodeSniffer](https://github.com/squizlabs/PHP
 It builds upon rules from [Slevomat Coding Standard](https://github.com/slevomat/coding-standard)
 and [PHPCSExtra](https://github.com/PHPCSStandards/PHPCSExtra), with a focus on:
 
+
 **Type Safety:**
 - `declare(strict_types=1)` required in all files
 - Parameter, return, property, and class constant type hints required
@@ -47,6 +48,17 @@ Install this package as a development dependency using [Composer](https://getcom
 ```bash
 composer require --dev wptechnix/coding-standards
 ```
+
+### Automatic Registration (Optional)
+
+For automatic registration of the standard with PHP_CodeSniffer, optionally install the
+[Dealerdirect Composer Installer](https://github.com/Dealerdirect/phpcodesniffer-composer-installer):
+
+```bash
+composer require --dev dealerdirect/phpcodesniffer-composer-installer
+```
+
+Without Dealerdirect, you can still use the standard by manually referencing it in your `phpcs.xml` file.
 
 ## Usage
 
@@ -84,6 +96,12 @@ To automatically fix violations:
 ```bash
 ./vendor/bin/phpcbf
 ```
+
+## Project-Specific Coding Standards
+
+This base standard can be extended for project-specific coding requirements. The following projects xtend WPTechnix coding standards:
+
+- [WPTechnix WordPress Coding Standards](https://github.com/WPTechnix/wordpress-coding-standards) - Extends this standard with WordPress-specific rules and conventions
 
 ## Contributing
 

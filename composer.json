@@ -25,6 +25,9 @@
         "phpcsstandards/phpcsextra": "^1.4",
         "slevomat/coding-standard": "^8.0"
     },
+    "suggest": {
+        "dealerdirect/phpcodesniffer-composer-installer": "For automatic registration of the coding standard with PHP_CodeSniffer"
+    },
     "support": {
         "issues": "https://github.com/wptechnix/coding-standards/issues",
         "source": "https://github.com/wptechnix/coding-standards"
