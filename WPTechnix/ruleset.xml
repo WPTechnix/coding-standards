@@ -95,14 +95,6 @@
     <!-- Type Hint Formatting -->
     <rule ref="SlevomatCodingStandard.TypeHints.LongTypeHints"/>
     <rule ref="SlevomatCodingStandard.TypeHints.NullTypeHintOnLastPosition"/>
-    <rule ref="SlevomatCodingStandard.TypeHints.UnionTypeHintFormat">
-        <properties>
-            <property name="enable" value="true"/>
-            <property name="withSpaces" value="no"/>
-            <property name="shortNullable" value="yes"/>
-            <property name="nullPosition" value="last"/>
-        </properties>
-    </rule>
     <rule ref="SlevomatCodingStandard.TypeHints.DNFTypeHintFormat">
         <properties>
             <property name="enable" value="true"/>
@@ -112,6 +104,7 @@
             <property name="nullPosition" value="last"/>
         </properties>
     </rule>
+    
     <rule ref="SlevomatCodingStandard.TypeHints.UselessConstantTypeHint"/>
 
     <!-- Disallow Array Type Hint Syntax (use generics in PHPDoc) -->
@@ -197,8 +190,7 @@
     <rule ref="SlevomatCodingStandard.Arrays.MultiLineArrayEndBracketPlacement"/>
     <rule ref="SlevomatCodingStandard.Arrays.SingleLineArrayWhitespace">
         <properties>
-            <property name="spacesCountInsideBrackets" type="int" value="0"/>
-            <property name="spacesCountAfterComma" type="int" value="1"/>
+            <property name="spacesAroundBrackets" value="0"/>
             <property name="enableEmptyArrayCheck" value="true"/>
         </properties>
     </rule>
@@ -238,7 +230,7 @@
     <rule ref="SlevomatCodingStandard.Classes.RequireMultiLineMethodSignature">
         <properties>
             <property name="minLineLength" value="121"/>
-            <property name="minParameterCount" value="4"/>
+            <property name="minParametersCount" value="4"/>
             <property name="withPromotedProperties" value="true"/>
         </properties>
     </rule>
@@ -279,10 +271,12 @@
     <!-- Ternary Operators -->
     <rule ref="SlevomatCodingStandard.ControlStructures.RequireMultiLineTernaryOperator">
         <properties>
+            <!-- PSR-12 typical line length limit -->
             <property name="lineLengthLimit" value="120"/>
-            <property name="minExpressionsInOneLine" value="2"/>
+            <property name="minExpressionsLength" value="null"/>
         </properties>
     </rule>
+
 
     <!-- ################################################################## -->
     <!-- ##                      EXCEPTION HANDLING                      ## -->
@@ -523,7 +517,7 @@
     </rule>
 
     <rule ref="SlevomatCodingStandard.ControlStructures.DisallowContinueWithoutIntegerOperandInSwitch"/>
-    <rule ref="SlevomatCodingStandard.ControlStructures.DisallowTrailingMultiLineTernaryOperatorSniff"/>
+    <rule ref="SlevomatCodingStandard.ControlStructures.DisallowTrailingMultiLineTernaryOperator"/>
     <rule ref="SlevomatCodingStandard.ControlStructures.DisallowYodaComparison"/>
 
     <rule ref="SlevomatCodingStandard.ControlStructures.EarlyExit">
