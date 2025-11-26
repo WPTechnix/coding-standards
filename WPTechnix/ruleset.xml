@@ -8,7 +8,7 @@
     <!-- ##                    BASE STANDARD: PSR-12                     ## -->
     <!-- ################################################################## -->
 
-    <rule ref="PSR12"/>
+    <rule ref="PSR12" />
 
     <!-- ################################################################## -->
     <!-- ##                   TYPE SAFETY                                ## -->
@@ -104,7 +104,7 @@
             <property name="nullPosition" value="last"/>
         </properties>
     </rule>
-    
+
     <rule ref="SlevomatCodingStandard.TypeHints.UselessConstantTypeHint"/>
 
     <!-- Disallow Array Type Hint Syntax (use generics in PHPDoc) -->
@@ -230,13 +230,7 @@
     <rule ref="SlevomatCodingStandard.Classes.RequireMultiLineMethodSignature">
         <properties>
             <property name="minLineLength" value="121"/>
-            <property name="minParametersCount" value="4"/>
-            <property name="withPromotedProperties" value="true"/>
-        </properties>
-    </rule>
-    <rule ref="SlevomatCodingStandard.Classes.RequireSingleLineMethodSignature">
-        <properties>
-            <property name="maxLineLength" value="120"/>
+            <property name="withPromotedProperties" value="true" />
         </properties>
     </rule>
 
@@ -310,28 +304,61 @@
 
     <rule ref="SlevomatCodingStandard.Classes.ClassStructure">
         <properties>
+            <property name="methodGroups" type="array">
+                <element key="inject method" value="inject"/>
+                <element key="inject methods" value="inject*"/>
+                <element key="phpunit before" value="setUp, @before, #PHPUnit\Framework\Attributes\Before"/>
+                <element key="phpunit data provider" value="*DataProvider"/>
+            </property>
+
             <property name="groups" type="array">
+                <!-- Imports & enum cases -->
                 <element value="uses"/>
                 <element value="enum cases"/>
+
+                <!-- Constants -->
                 <element value="public constants"/>
-                <element value="protected constants"/>
-                <element value="private constants"/>
-                <element value="public static properties"/>
-                <element value="protected static properties"/>
-                <element value="private static properties"/>
-                <element value="public properties"/>
-                <element value="protected properties"/>
-                <element value="private properties"/>
+                <element value="constants"/>
+
+                <!-- Properties -->
+                <element value="public properties, protected properties, private properties, public static properties, protected static properties, private static properties"/>
+
+                <!-- Constructor / special methods -->
                 <element value="constructor"/>
                 <element value="static constructors"/>
-                <element value="destructor"/>
-                <element value="magic methods"/>
+
+                <!-- Custom method groups -->
+                <element value="inject method"/>
+                <element value="inject methods"/>
+                <element value="phpunit before"/>
+
+                <!-- Methods -->
+                <element value="public static final methods"/>
+                <element value="public static abstract methods"/>
+                <element value="protected static final methods"/>
+                <element value="protected static abstract methods"/>
+
                 <element value="public static methods"/>
                 <element value="protected static methods"/>
                 <element value="private static methods"/>
+
+                <element value="public final methods"/>
+                <element value="public abstract methods"/>
+                <element value="protected final methods"/>
+                <element value="protected abstract methods"/>
+
                 <element value="public methods"/>
                 <element value="protected methods"/>
                 <element value="private methods"/>
+
+                <!-- PHPUnit data providers after normal methods -->
+                <element value="phpunit data provider"/>
+
+                <!-- Magic methods last -->
+                <element value="magic methods"/>
+
+                <!-- Destructor last -->
+                <element value="destructor"/>
             </property>
         </properties>
     </rule>
@@ -349,6 +376,13 @@
     <rule ref="SlevomatCodingStandard.Classes.DisallowMultiConstantDefinition"/>
     <rule ref="SlevomatCodingStandard.Classes.DisallowMultiPropertyDefinition"/>
     <rule ref="SlevomatCodingStandard.Classes.DisallowStringExpressionPropertyFetch"/>
+
+    <rule ref="SlevomatCodingStandard.Classes.EmptyLinesAroundClassBraces">
+        <properties>
+            <property name="linesCountAfterOpeningBrace" value="0"/>
+            <property name="linesCountBeforeClosingBrace" value="0"/>
+        </properties>
+    </rule>
 
     <rule ref="SlevomatCodingStandard.Classes.EnumCaseSpacing">
         <properties>
@@ -412,7 +446,6 @@
             <property name="allowOnSameLine" value="false"/>
         </properties>
     </rule>
-    <rule ref="SlevomatCodingStandard.Attributes.AttributesOrder"/>
     <rule ref="SlevomatCodingStandard.Attributes.DisallowAttributesJoining"/>
     <rule ref="SlevomatCodingStandard.Attributes.DisallowMultipleAttributesPerLine"/>
     <rule ref="SlevomatCodingStandard.Attributes.RequireAttributeAfterDocComment"/>
@@ -605,16 +638,12 @@
     </rule>
 
     <rule ref="SlevomatCodingStandard.Namespaces.DisallowGroupUse"/>
-    <rule ref="SlevomatCodingStandard.Namespaces.FullyQualifiedClassNameInAnnotation"/>
-    <rule ref="SlevomatCodingStandard.Namespaces.FullyQualifiedExceptions"/>
-    <rule ref="SlevomatCodingStandard.Namespaces.FullyQualifiedGlobalConstants"/>
-    <rule ref="SlevomatCodingStandard.Namespaces.FullyQualifiedGlobalFunctions"/>
     <rule ref="SlevomatCodingStandard.Namespaces.MultipleUsesPerLine"/>
     <rule ref="SlevomatCodingStandard.Namespaces.NamespaceDeclaration"/>
 
     <rule ref="SlevomatCodingStandard.Namespaces.NamespaceSpacing">
         <properties>
-            <property name="linesCountBeforeNamespace" value="0"/>
+            <property name="linesCountBeforeNamespace" value="1"/>
             <property name="linesCountAfterNamespace" value="1"/>
         </properties>
     </rule>
@@ -623,8 +652,8 @@
         <properties>
             <property name="searchAnnotations" value="true"/>
             <property name="allowFullyQualifiedGlobalClasses" value="false"/>
-            <property name="allowFullyQualifiedGlobalFunctions" value="false"/>
-            <property name="allowFullyQualifiedGlobalConstants" value="false"/>
+            <property name="allowFullyQualifiedGlobalFunctions" value="true"/>
+            <property name="allowFullyQualifiedGlobalConstants" value="true"/>
             <property name="allowFallbackGlobalFunctions" value="false"/>
             <property name="allowFallbackGlobalConstants" value="false"/>
             <property name="allowPartialUses" value="false"/>
@@ -711,6 +740,7 @@
         </properties>
     </rule>
     <rule ref="SlevomatCodingStandard.Variables.UselessVariable"/>
+    <rule ref="SlevomatCodingStandard.Variables.DisallowVariableVariable"/>
 
     <!-- ################################################################## -->
     <!-- ##                       WHITESPACES                            ## -->
@@ -724,6 +754,7 @@
             <property name="ignoreSpacesInParameters" value="false"/>
         </properties>
     </rule>
+
 
     <!-- ################################################################## -->
     <!-- ##                      SQUIZ STANDARD                          ## -->
@@ -783,10 +814,10 @@
         </properties>
     </rule>
     <rule ref="Squiz.Commenting.VariableComment" />
-    <rule ref="Squiz.Commenting.BlockComment" />
-    <rule ref="Squiz.Commenting.FileComment" />
+<!--    <rule ref="Squiz.Commenting.BlockComment" />-->
+<!--    <rule ref="Squiz.Commenting.FileComment" />-->
     <rule ref="Squiz.Commenting.ClassComment" />
-    <rule ref="Squiz.Commenting.FunctionComment"/>
+<!--    <rule ref="Squiz.Commenting.FunctionComment"/>-->
     <rule ref="Squiz.Commenting.InlineComment" />
     <rule ref="PEAR.Commenting.InlineComment"/>
 
