@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/WPTechnix/coding-standards/compare/v1.0.1...v1.1.0) (2025-11-26)
+
+
+### Features
+
+* **ruleset:** modernize class structure and replace legacy commenting sniffs ([#9](https://github.com/WPTechnix/coding-standards/issues/9)) ([d74c2c5](https://github.com/WPTechnix/coding-standards/commit/d74c2c5afa44c4baa0e83657fed7b68fa44f2066))
+
 ## [1.0.1](https://github.com/WPTechnix/coding-standards/compare/v1.0.0...v1.0.1) (2025-11-23)
 
 
