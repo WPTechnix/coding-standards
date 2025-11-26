@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0](https://github.com/WPTechnix/coding-standards/compare/v1.1.0...v1.2.0) (2025-11-26)
+
+
+### Features
+
+* allow built-in PHP functions and constants in coding standard ruleset ([69e3f3d](https://github.com/WPTechnix/coding-standards/commit/69e3f3d2d81969d3c2ddeb0ab55410c0112afc44))
+
 ## [1.1.0](https://github.com/WPTechnix/coding-standards/compare/v1.0.1...v1.1.0) (2025-11-26)
 
 
