@@ -1,5 +1,16 @@
 # Changelog
 
+## [2.0.0](https://github.com/WPTechnix/coding-standards/compare/v1.2.0...v2.0.0) (2025-11-26)
+
+
+### ⚠ BREAKING CHANGES
+
+* **ruleset:** upgrade slevomat to 8.22 and enforce strict config ([#13](https://github.com/WPTechnix/coding-standards/issues/13))
+
+### Features
+
+* **ruleset:** upgrade slevomat to 8.22 and enforce strict config ([#13](https://github.com/WPTechnix/coding-standards/issues/13)) ([2970bb7](https://github.com/WPTechnix/coding-standards/commit/2970bb7e4f329f1efc7d5ed307ff434ba06f7f90))
+
 ## [1.2.0](https://github.com/WPTechnix/coding-standards/compare/v1.1.0...v1.2.0) (2025-11-26)
 
 
