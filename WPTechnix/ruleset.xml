@@ -650,13 +650,32 @@
 
     <rule ref="SlevomatCodingStandard.Namespaces.ReferenceUsedNamesOnly">
         <properties>
-            <property name="searchAnnotations" value="true"/>
-            <property name="allowFullyQualifiedGlobalClasses" value="false"/>
+
+            <!-- ALLOW USING BUILT-IN GLOBAL FUNCTIONS WITHOUT IMPORTS -->
+            <property name="allowFallbackGlobalFunctions" value="true"/>
+
+            <!-- ALLOW USING BUILT-IN GLOBAL CONSTANTS WITHOUT IMPORTS -->
+            <property name="allowFallbackGlobalConstants" value="true"/>
+
+            <!-- ALLOW USING BUILT-IN CLASSES/FUNCTIONS/CONSTANTS WITH LEADING \ -->
+            <property name="allowFullyQualifiedGlobalClasses" value="true"/>
             <property name="allowFullyQualifiedGlobalFunctions" value="true"/>
             <property name="allowFullyQualifiedGlobalConstants" value="true"/>
-            <property name="allowFallbackGlobalFunctions" value="false"/>
-            <property name="allowFallbackGlobalConstants" value="false"/>
+
+            <!-- DISALLOW PARTIAL NAMESPACE IMPORTS (best practice) -->
             <property name="allowPartialUses" value="false"/>
+
+            <!-- KEEP DEFAULT BEHAVIOR EVEN IN FILES WITHOUT A NAMESPACE -->
+            <property name="allowWhenNoNamespace" value="true"/>
+
+            <!-- KEEP DEFAULTS FOR ADVANCED OPTIONS YOU DO NOT NEED -->
+            <!-- searchAnnotations: leave false -->
+            <!-- namespacesRequiredToUse: leave unset -->
+            <!-- allowFullyQualifiedExceptions: leave unset -->
+            <!-- specialExceptionNames: leave unset -->
+            <!-- ignoredNames: leave unset -->
+            <!-- allowFullyQualifiedNameForColliding*: leave unset -->
+
         </properties>
     </rule>
 
