@@ -46,7 +46,7 @@ and [PHPCSExtra](https://github.com/PHPCSStandards/PHPCSExtra), with a focus on:
 Install this package as a development dependency using [Composer](https://getcomposer.org).
 
 ```bash
-composer require --dev wptechnix/coding-standards
+composer require --dev "wptechnix/coding-standards:^2.0"
 ```
 
 ### Automatic Registration (Optional)
