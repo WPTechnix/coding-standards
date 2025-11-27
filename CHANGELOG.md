@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.0.1](https://github.com/WPTechnix/coding-standards/compare/v2.0.0...v2.0.1) (2025-11-27)
+
+
+### Bug Fixes
+
+* **rules:** disable explicit assertions and array key sorting ([216cbfe](https://github.com/WPTechnix/coding-standards/commit/216cbfeed6d26fc1212ccf54d02ca3d3fa5ea729))
+
 ## [2.0.0](https://github.com/WPTechnix/coding-standards/compare/v1.2.0...v2.0.0) (2025-11-26)
 
 
