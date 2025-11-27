@@ -196,7 +196,6 @@
         </properties>
     </rule>
     <rule ref="SlevomatCodingStandard.Arrays.ArrayAccess"/>
-    <rule ref="SlevomatCodingStandard.Arrays.AlphabeticallySortedByKeys"/>
 
     <!-- ################################################################## -->
     <!-- ##                    TRAILING COMMAS (PSR-12)                  ## -->
@@ -742,13 +741,6 @@
     <rule ref="SlevomatCodingStandard.PHP.ReferenceSpacing">
         <properties>
             <property name="spacesCountAfterReference" value="0"/>
-        </properties>
-    </rule>
-
-    <rule ref="SlevomatCodingStandard.PHP.RequireExplicitAssertion">
-        <properties>
-            <property name="enableIntegerRanges" value="true"/>
-            <property name="enableAdvancedStringTypes" value="true"/>
         </properties>
     </rule>
 
