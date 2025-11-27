@@ -110,9 +110,6 @@
     <!-- Disallow Array Type Hint Syntax (use generics in PHPDoc) -->
     <rule ref="SlevomatCodingStandard.TypeHints.DisallowArrayTypeHintSyntax"/>
 
-    <!-- Disallow Mixed Type Hint (strictest standards) -->
-    <rule ref="SlevomatCodingStandard.TypeHints.DisallowMixedTypeHint"/>
-
     <!-- Strict Comparison Operators - CRITICAL -->
     <rule ref="SlevomatCodingStandard.Operators.DisallowEqualOperators"/>
 
@@ -783,7 +780,6 @@
     <!-- ##                      SQUIZ STANDARD                          ## -->
     <!-- ################################################################## -->
 
-    <rule ref="Squiz.Strings.DoubleQuoteUsage"/>
     <rule ref="Squiz.Strings.DoubleQuoteUsage.NotRequired"/>
     <rule ref="Squiz.PHP.Eval"/>
     <rule ref="Squiz.Commenting.EmptyCatchComment"/>
@@ -841,8 +837,8 @@
     <!--    <rule ref="Squiz.Commenting.FileComment" />-->
     <rule ref="Squiz.Commenting.ClassComment" />
     <!--    <rule ref="Squiz.Commenting.FunctionComment"/>-->
-    <rule ref="Squiz.Commenting.InlineComment" />
-    <rule ref="PEAR.Commenting.InlineComment"/>
+    <!-- <rule ref="Squiz.Commenting.InlineComment" /> -->
+    <!-- <rule ref="PEAR.Commenting.InlineComment"/> -->
 
     <!-- ################################################################## -->
     <!-- ##                    GENERIC STANDARD                          ## -->
