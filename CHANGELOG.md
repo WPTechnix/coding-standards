@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.0.2](https://github.com/WPTechnix/coding-standards/compare/v2.0.1...v2.0.2) (2025-11-27)
+
+
+### Bug Fixes
+
+* **ruleset:** allow mixed typehints and disable squiz inline comment ([a2644d2](https://github.com/WPTechnix/coding-standards/commit/a2644d280784681d94d6f8b7d3d492a56824b57d))
+
 ## [2.0.1](https://github.com/WPTechnix/coding-standards/compare/v2.0.0...v2.0.1) (2025-11-27)
 
 
