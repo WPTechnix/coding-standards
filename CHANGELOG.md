@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.0](https://github.com/WPTechnix/coding-standards/compare/v2.0.2...v2.1.0) (2026-01-03)
+
+
+### Features
+
+* relax useless annotation and comment rules ([e0d6757](https://github.com/WPTechnix/coding-standards/commit/e0d67571009c3bc27e2f0a7b34682f34c7d7bded))
+
 ## [2.0.2](https://github.com/WPTechnix/coding-standards/compare/v2.0.1...v2.0.2) (2025-11-27)
 
 
