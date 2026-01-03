@@ -39,6 +39,7 @@
                 <element value="IteratorAggregate"/>
             </property>
         </properties>
+        <exclude name="SlevomatCodingStandard.TypeHints.ParameterTypeHint.UselessAnnotation"/>
     </rule>
     <rule ref="SlevomatCodingStandard.TypeHints.ParameterTypeHintSpacing"/>
 
@@ -58,6 +59,7 @@
                 <element value="IteratorAggregate"/>
             </property>
         </properties>
+        <exclude name="SlevomatCodingStandard.TypeHints.ReturnTypeHint.UselessAnnotation"/>
     </rule>
     <rule ref="SlevomatCodingStandard.TypeHints.ReturnTypeHintSpacing">
         <properties>
@@ -79,15 +81,11 @@
                 <element value="IteratorAggregate"/>
             </property>
         </properties>
+        <exclude name="SlevomatCodingStandard.TypeHints.PropertyTypeHint.UselessAnnotation"/>
     </rule>
 
     <!-- Class Constant Type Hints (PHP 8.3+) -->
-    <rule ref="SlevomatCodingStandard.TypeHints.ClassConstantTypeHint">
-        <properties>
-            <property name="enableNativeTypeHint" value="true"/>
-            <property name="fixableNativeTypeHint" value="yes"/>
-        </properties>
-    </rule>
+    <rule ref="SlevomatCodingStandard.TypeHints.ClassConstantTypeHint"/>
 
     <!-- Nullable Type for Null Default Value - CRITICAL -->
     <rule ref="SlevomatCodingStandard.TypeHints.NullableTypeForNullDefaultValue"/>
@@ -104,8 +102,6 @@
             <property name="nullPosition" value="last"/>
         </properties>
     </rule>
-
-    <rule ref="SlevomatCodingStandard.TypeHints.UselessConstantTypeHint"/>
 
     <!-- Disallow Array Type Hint Syntax (use generics in PHPDoc) -->
     <rule ref="SlevomatCodingStandard.TypeHints.DisallowArrayTypeHintSyntax"/>
@@ -510,7 +506,9 @@
         </properties>
     </rule>
 
-    <rule ref="SlevomatCodingStandard.Commenting.InlineDocCommentDeclaration"/>
+    <rule ref="SlevomatCodingStandard.Commenting.InlineDocCommentDeclaration">
+        <exclude name="SlevomatCodingStandard.Commenting.InlineDocCommentDeclaration.MissingVariable" />
+    </rule>
     <rule ref="SlevomatCodingStandard.Commenting.RequireOneDocComment"/>
     <rule ref="SlevomatCodingStandard.Commenting.RequireOneLineDocComment"/>
     <rule ref="SlevomatCodingStandard.Commenting.DisallowOneLinePropertyDocComment"/>
@@ -525,7 +523,6 @@
         </properties>
     </rule>
 
-    <rule ref="SlevomatCodingStandard.Commenting.UselessInheritDocComment"/>
 
     <!-- ################################################################## -->
     <!-- ##                    CONTROL STRUCTURES                        ## -->
@@ -783,16 +780,15 @@
     <rule ref="Squiz.Strings.DoubleQuoteUsage.NotRequired"/>
     <rule ref="Squiz.PHP.Eval"/>
     <rule ref="Squiz.Commenting.EmptyCatchComment"/>
-    <rule ref="Squiz.PHP.CommentedOutCode"/>
     <rule ref="Squiz.PHP.NonExecutableCode"/>
     <rule ref="Squiz.PHP.DisallowSizeFunctionsInLoops"/>
     <rule ref="Squiz.Classes.SelfMemberReference"/>
     <rule ref="Squiz.Functions.FunctionDuplicateArgument"/>
     <rule ref="Squiz.Operators.ValidLogicalOperators"/>
-    <rule ref="Squiz.Functions.GlobalFunction"/>
+<!--    <rule ref="Squiz.Functions.GlobalFunction"/>-->
     <rule ref="Squiz.PHP.LowercasePHPFunctions"/>
     <rule ref="Squiz.PHP.DisallowMultipleAssignments"/>
-    <rule ref="Squiz.Arrays.ArrayBracketSpacing"/>
+<!--    <rule ref="Squiz.Arrays.ArrayBracketSpacing"/>-->
     <rule ref="Squiz.Scope.StaticThisUsage"/>
     <rule ref="Squiz.WhiteSpace.FunctionOpeningBraceSpace"/>
     <rule ref="Squiz.WhiteSpace.LogicalOperatorSpacing"/>
@@ -818,13 +814,13 @@
         </properties>
     </rule>
 
-    <rule ref="Squiz.WhiteSpace.FunctionSpacing">
-        <properties>
-            <property name="spacing" value="1"/>
-            <property name="spacingBeforeFirst" value="0"/>
-            <property name="spacingAfterLast" value="0"/>
-        </properties>
-    </rule>
+<!--    <rule ref="Squiz.WhiteSpace.FunctionSpacing">-->
+<!--        <properties>-->
+<!--            <property name="spacing" value="1"/>-->
+<!--            <property name="spacingBeforeFirst" value="0"/>-->
+<!--            <property name="spacingAfterLast" value="0"/>-->
+<!--        </properties>-->
+<!--    </rule>-->
 
     <rule ref="Squiz.Strings.ConcatenationSpacing">
         <properties>
@@ -832,10 +828,10 @@
             <property name="ignoreNewlines" value="true"/>
         </properties>
     </rule>
-    <rule ref="Squiz.Commenting.VariableComment" />
+<!--    <rule ref="Squiz.Commenting.VariableComment" />-->
     <!--    <rule ref="Squiz.Commenting.BlockComment" />-->
     <!--    <rule ref="Squiz.Commenting.FileComment" />-->
-    <rule ref="Squiz.Commenting.ClassComment" />
+<!--    <rule ref="Squiz.Commenting.ClassComment" />-->
     <!--    <rule ref="Squiz.Commenting.FunctionComment"/>-->
     <!-- <rule ref="Squiz.Commenting.InlineComment" /> -->
     <!-- <rule ref="PEAR.Commenting.InlineComment"/> -->
@@ -878,7 +874,6 @@
         </properties>
     </rule>
     <rule ref="Generic.Strings.UnnecessaryHeredoc"/>
-    <rule ref="Generic.Strings.UnnecessaryStringConcat"/>
     <rule ref="Generic.VersionControl.GitMergeConflict"/>
     <rule ref="Generic.Arrays.DisallowLongArraySyntax"/>
     <rule ref="Generic.Formatting.SpaceAfterCast"/>
