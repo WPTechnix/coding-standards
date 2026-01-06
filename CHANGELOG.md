@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.1.1](https://github.com/WPTechnix/coding-standards/compare/v2.1.0...v2.1.1) (2026-01-06)
+
+
+### Bug Fixes
+
+* remove minExpressionsLength property from ControlStructures.RequireMultiLineTernaryOperator ([b0ae306](https://github.com/WPTechnix/coding-standards/commit/b0ae306316243f38c2c0f3356fddf5ba54500e1d))
+* remove SlevomatCodingStandard.Commenting.RequireOneDocComment ([9635ea8](https://github.com/WPTechnix/coding-standards/commit/9635ea86039f9844980b7c53936d1cb3d87c404a))
+
 ## [2.1.0](https://github.com/WPTechnix/coding-standards/compare/v2.0.2...v2.1.0) (2026-01-03)
 
 
