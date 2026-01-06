@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.2](https://github.com/WPTechnix/coding-standards/compare/v2.1.1...v2.1.2) (2026-01-06)
+
+
+### Bug Fixes
+
+* remove PSR1 Files SideEffects ([8ed4160](https://github.com/WPTechnix/coding-standards/commit/8ed4160ace72c6d297250a90a71001bfa4a3a908))
+
 ## [2.1.1](https://github.com/WPTechnix/coding-standards/compare/v2.1.0...v2.1.1) (2026-01-06)
 
 
