@@ -260,7 +260,6 @@
         <properties>
             <!-- PSR-12 typical line length limit -->
             <property name="lineLengthLimit" value="120"/>
-            <property name="minExpressionsLength" value="null"/>
         </properties>
     </rule>
 
