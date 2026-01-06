@@ -508,7 +508,6 @@
     <rule ref="SlevomatCodingStandard.Commenting.InlineDocCommentDeclaration">
         <exclude name="SlevomatCodingStandard.Commenting.InlineDocCommentDeclaration.MissingVariable" />
     </rule>
-    <rule ref="SlevomatCodingStandard.Commenting.RequireOneDocComment"/>
     <rule ref="SlevomatCodingStandard.Commenting.RequireOneLineDocComment"/>
     <rule ref="SlevomatCodingStandard.Commenting.DisallowOneLinePropertyDocComment"/>
 
